@@ -1,32 +1,28 @@
-const tempData = [
+// para testear
+
+const peliculas = [
   {
-    title: "Guardians of the Galaxy Vol. 2",
-    year: 2017,
-    director: "James Gunn",
-    duration: "2h 16min",
-    genre: ["Action", "Adventure", "Comedy"],
-    rate: 7.7,
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
+    nombre: "El Telefono Negro 2",
+    anio: 2025,
+    descripcion: "Finn lidia con la vida tras su cautiverio.",
+    imagen: "./assets/img/Black_Phone_2.jpg"
   },
   {
-    title: "Star Wars: Episode IV - A New Hope",
-    year: 1977,
-    director: "George Lucas",
-    duration: "2h 1min",
-    genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
-    rate: 8.7,
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg",
+    nombre: "Zootopia 2",
+    anio: 2025,
+    descripcion: "Judy y Nick se encuentran tras la pista de un gran misterio.",
+    imagen: "./assets/img/Zootopia 2.jpg"
   },
   {
-    title: "The Lord of the Rings: The Fellowship of the Ring",
-    year: 2001,
-    director: "Peter Jackson",
-    duration: "2h 58min",
-    genre: ["Action", "Adventure", "Drama", "Fantasy"],
-    rate: 8.8,
-    poster:
-      "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg",
+    nombre: "Los 4 Fantasticos: Primeros Pasos",
+    anio: 2025,
+    descripcion: "La primera familia de Marvel se enfrentara a su mayor desafio hasta la fecha.",
+    imagen: "./assets/img/loscuatrofantasticos.jpg"
+  },
+  {
+    nombre: "Mufasa: El Rey Leon",
+    anio: 2024,
+    descripcion: "Una precuela del exito de Disney de 2019 ´El Rey Leon´.",
+    imagen: "./assets/img/Mufasa.jpg"
   },
 ];
