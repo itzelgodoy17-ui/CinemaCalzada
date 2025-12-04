@@ -1,61 +1,89 @@
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
   
-  const contenedor = document.getElementById('contenedorPeliculas');
+  const contenedor = $('#contenedorPeliculas');
   
   
   function crearTarjetaPelicula(pelicula) {
-    
-    const article = document.createElement('article');
-    article.classList.add('tarjeta-pelicula');
-    
-    
-    const img = document.createElement('img');
-    img.src = pelicula.imagen;
-    img.alt = pelicula.nombre;
-    
-    
-    const info = document.createElement('div');
-    info.classList.add('pelicula-info');
-    
-    
-    const nombre = document.createElement('h3');
-    nombre.textContent = pelicula.nombre;
-    
-    // Año
-    const anio = document.createElement('p');
-    anio.classList.add('pelicula-anio');
-    anio.textContent = `Año: ${pelicula.anio}`;
-    
-    // Descripción
-    const descripcion = document.createElement('p');
-    descripcion.classList.add('pelicula-descripcion');
-    descripcion.textContent = pelicula.descripcion;
-    
-    // tarjeta
-    info.appendChild(nombre);
-    info.appendChild(anio);
-    info.appendChild(descripcion);
-    
-    article.appendChild(img);
-    article.appendChild(info);
-    
-    return article;
-  }
+  const article = $('<article></article>').addClass('tarjeta-pelicula');
   
-  // Función para cargar todas las películas
-  function cargarPeliculas(arrayPeliculas) {
-    // Limpiar el contenedor
-    contenedor.innerHTML = '';
+ 
+  const imgContainer = $('<div></div>').addClass('pelicula-imagen-container');
+  
+  
+  const img = $('<img>')
+    .attr('src', pelicula.poster)
+    .attr('alt', pelicula.title);
+  
+  
+  const rate = $('<p></p>')
+    .addClass('pelicula-rate')
+    .text(`⭐ ${pelicula.rate}/10`);
+  
+  
+  imgContainer.append(img, rate);
+  
+  
+  const info = $('<div></div>').addClass('pelicula-info');
+  
+  
+  const titulo = $('<h3></h3>').text(pelicula.title);
+  
+ 
+  const anio = $('<p></p>')
+    .addClass('pelicula-anio')
+    .text(`Año: ${pelicula.year}`);
+  
+  
+  const director = $('<p></p>')
+    .addClass('pelicula-director')
+    .text(`Director: ${pelicula.director}`);
+  
+  
+  const duracion = $('<p></p>')
+    .addClass('pelicula-duracion')
+    .text(`Duración: ${pelicula.duration}`);
+  
+  
+  const genero = $('<p></p>')
+    .addClass('pelicula-genero')
+    .text(`Género: ${pelicula.genre.join(', ')}`);
+  
+  
+  info.append(titulo, anio, director, duracion, genero);
+  article.append(imgContainer, info);
+  
+  return article;
+}
+  
+  
+  function cargarPeliculas(peliculas) {
     
-    // Crear y agregar cada tarjeta
-    arrayPeliculas.forEach(pelicula => {
+    contenedor.empty();
+    
+    
+    peliculas.forEach(pelicula => {
       const tarjeta = crearTarjetaPelicula(pelicula);
-      contenedor.appendChild(tarjeta);
+      contenedor.append(tarjeta);
     });
   }
   
-  // Cargar películas inicialmente
-  if (typeof peliculas !== 'undefined') {
-    cargarPeliculas(peliculas);
+  
+  function obtenerPeliculas() {
+    $.ajax({
+      url: 'https://students-api.up.railway.app/movies',
+      method: 'GET',
+      success: function(data) {
+        console.log('Películas obtenidas:', data);
+        
+        cargarPeliculas(data);
+      },
+      error: function(error) {
+        console.error('Error al obtener películas:', error);
+        contenedor.html('<p style="color: red; text-align: center;">Error al cargar las películas. Por favor, intenta más tarde.</p>');
+      }
+    });
   }
+  
+  
+  obtenerPeliculas();
 });

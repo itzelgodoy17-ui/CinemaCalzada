@@ -13,13 +13,13 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: var(--negro);
   color: var(--blanco);
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 
 header {
   background-color: var(--gris-oscuro);
-  padding: 1.5rem 2rem;
+  padding: 0.7rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@ nav ul {
   display: flex;
   gap: 8.5rem;
   list-style: none;
-  margin-right: 230px;
+  margin-right: 90px;
 }
 
 nav a {
@@ -119,10 +119,10 @@ main {
 
 #contenedorPeliculas {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.4rem;
   padding: 1rem 0;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -134,7 +134,15 @@ main {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid var(--gris-medio);
+  position: relative; 
 }
+
+
+.pelicula-imagen-container {
+  position: relative;
+  width: 100%;
+}
+
 
 .tarjeta-pelicula:hover {
   transform: translateY(-10px);
@@ -155,7 +163,9 @@ main {
 
 
 .pelicula-info {
-  padding: 1.5rem;
+  padding: 1rem;
+  min-height: 200px;
+  max-height: 300px;
 }
 
 .pelicula-info h3 {
@@ -175,6 +185,19 @@ main {
   font-size: 0.95rem;
   color: var(--gris-claro);
   line-height: 1.5;
+}
+
+.pelicula-rate {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffd700;
+  padding: 0.3rem 0.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 10;
 }
 
 
