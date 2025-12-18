@@ -1,10 +1,13 @@
 const validateMovieData = (req, res, next) => {
+    const{ title, year, director, duration, genre, rate, poster } = req.body
 
-    const{ title, year, director, duration, genre, rate, poster} = req.body
-    if (!title || !year || !director || !duration || !genre || !rate || !poster){
+    const labels = ["title", "year", "director", "duration", "genre", "rate", "poster"]
 
-        res.status(400).json("Error: falta informacion para crear la pelicula")
-
+    const missingLabels = labels.filter( label => !req.body[label])
+    if (missingLabels.length > 0){
+        res.status(401).json({
+            msg: `Faltan valores para crear la pelicula: ${missingLabels.join(`, `)}`
+        })
     } else {
         next()
     }

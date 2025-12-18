@@ -114,15 +114,15 @@
    // ✨ NUEVA FUNCIÓN CON AXIOS Y ASYNC/AWAIT
   async function obtenerPeliculas() {
     try {
-      // await espera a que la promesa se resuelva
+    
       const response = await axios.get('https://students-api.up.railway.app/movies');
       
-      // Si llegamos aquí, la petición fue exitosa
+    
       console.log('Películas obtenidas:', response.data);
       cargarPeliculas(response.data);
       
     } catch (error) {
-      // Si hay un error, se captura aquí
+     
       console.error('Error al obtener películas:', error);
       contenedor.html('<div class="alert alert-danger" role="alert">Error al cargar las películas. Por favor, intenta más tarde.</div>');
     }

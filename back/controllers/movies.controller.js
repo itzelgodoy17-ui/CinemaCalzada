@@ -12,23 +12,11 @@ const getMoviesController = async (req, res) => {
     }
 }
 
-
-// const createMovieController = (req, res) => {
-
-
-//     const resultado = createMovieService(req.body)
-//     res.status(200).json({
-//         msg: "Pelicula creada con exito",
-//         date: resultado
-//     })
-
-
-// }
-
 const createMovieController = async (req, res) => {
+
     try {
         const resultado = await createMovieService(req.body);
-        res.status(201).json({
+        res.status(200).json({
             msg: "Pelicula creada con exito",
             data: resultado
         });
