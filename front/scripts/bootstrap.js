@@ -111,7 +111,7 @@
   //   });
   // }
 
-   // ✨ NUEVA FUNCIÓN CON AXIOS Y ASYNC/AWAIT
+  
   async function obtenerPeliculas() {
     try {
     
