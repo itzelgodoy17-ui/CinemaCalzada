@@ -27,3 +27,8 @@ A dynamic web platform designed for movie enthusiasts and cinema administrators.
   <img src="./screenshotdetails.png.png" alt="Details" width="400">
   <img src="./screenshotaddmovie.png.png" alt="Addmovie" width="400">
 </p>
+
+---
+
+## 👤 Author
+* **Itzel Godoy Lopez** - *Fullstack Developer Student*
