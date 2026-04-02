@@ -23,7 +23,7 @@ A dynamic web platform designed for movie enthusiasts and cinema administrators.
 ### 📸 Preview
 <p align="center">
   <img src="./screenshotfilehome.png.png" alt="Home" width="400">
-  <img src="./screenshotbootstrap.png.png" alt="Home" width="400">
+  <img src="./screenshotbootstrap.png.png" alt="File-bootstrap" width="400">
   <img src="./screenshotdetails.png.png" alt="Details" width="400">
-  <img src="./screenshotaddmovie.png.png" alt="Home" width="400">
+  <img src="./screenshotaddmovie.png.png" alt="Addmovie" width="400">
 </p>
