@@ -1,34 +1,34 @@
-# 🎬 CinemaCalzada - Movie Management System
+# 🎬 CinemaCalzada - Sistema de Gestión Cinematográfica
 
-A dynamic web platform designed for movie enthusiasts and cinema administrators. This project focuses on efficient data handling, seamless user experience, and a robust movie catalog management.
+Una plataforma web dinámica diseñada para entusiastas del cine y administradores de catálogos. Este proyecto se enfoca en el manejo eficiente de datos, una experiencia de usuario fluida y una gestión robusta del catálogo de películas.
 
-### 🚀 Key Features
-- **Interactive Catalog:** Browse movies with real-time details.
-- **Admin Dashboard:** Full CRUD operations for managing the movie database.
-- **Responsive Design:** Optimized for a smooth experience across all devices.
-- **Form Validation:** Client-side validation for secure and accurate data entry.
+### 🚀 Características Clave
+- **Catálogo Interactivo:** Explora películas con detalles actualizados en tiempo real.
+- **Panel de Administración:** Operaciones CRUD completas para gestionar la base de datos de películas.
+- **Diseño Responsivo:** Optimizado para una experiencia fluida en todos los dispositivos.
+- **Validación de Formularios:** Validación del lado del cliente para una entrada de datos segura y precisa.
 
-### 🛠️ Tech Stack
+### 🛠️ Stack Tecnológico
 - **Front-End:** JavaScript, HTML, CSS, Bootstrap.
-- **Back-End Integration:** RESTful API communication using Axios.
-- **Development Tools:** Git for version control and modular architecture.
+- **Integración Back-End:** Comunicación con API RESTful utilizando Axios.
+- **Herramientas de Desarrollo:** Git para control de versiones y arquitectura modular.
 
-### 📂 Project Structure
-- `scripts/`: Logic for API requests and DOM manipulation.
-- `styles/`: Modular CSS for a clean and modern UI.
-- `assets/`: Optimized media and icons.
+### 📂 Estructura del Proyecto
+- `scripts/`: Lógica para peticiones a la API y manipulación del DOM.
+- `styles/`: CSS modular para una interfaz de usuario limpia y moderna.
+- `assets/`: Multimedia e iconos optimizados.
 
 ---
 
-### 📸 Preview
+### 📸 Vista Previa
 <p align="center">
-  <img src="./screenshotfilehome.png.png" alt="Home" width="400">
-  <img src="./screenshotbootstrap.png.png" alt="File-bootstrap" width="400">
-  <img src="./screenshotdetails.png.png" alt="Details" width="400">
-  <img src="./screenshotaddmovie.png.png" alt="Addmovie" width="400">
+  <img src="./screenshotfilehome.png.png" alt="Inicio" width="400">
+  <img src="./screenshotbootstrap.png.png" alt="Diseño Bootstrap" width="400">
+  <img src="./screenshotdetails.png.png" alt="Detalles" width="400">
+  <img src="./screenshotaddmovie.png.png" alt="Añadir Película" width="400">
 </p>
 
 ---
 
-## 👤 Author
-* **Itzel Godoy Lopez** - *Fullstack Developer Student*
+## 👤 Autor
+* **Itzel Godoy Lopez** - *Desarrollador Fullstack*
